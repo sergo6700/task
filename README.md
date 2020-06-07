@@ -8,6 +8,7 @@
 - VueX.
 - i18n.
 - Sweet Alert.
+- Vee Validate
 
 ## About Functionality
 
