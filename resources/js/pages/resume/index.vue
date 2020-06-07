@@ -29,12 +29,12 @@ export default {
     tabs () {
       return [
         {
-          icon: 'list',
+          icon: 'cog',
           name: this.$t('list'),
           route: 'resume.list'
         },
         {
-          icon: 'user',
+          icon: 'cog',
           name: this.$t('create'),
           route: 'resume.create'
         },

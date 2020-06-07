@@ -19,15 +19,23 @@
             >
                 <template v-slot:cell(delete)="data">
                     <b-button variant="danger" @click="deleteUser(data.item.id)" size="sm deleteButton">
-                        Delete
+                        {{$t('delete')}}
                     </b-button>
                 </template>
                 <template v-slot:cell(update)="data">
                     <b-button variant="warning" @click="updateUser(data.item.id)" size="sm deleteButton">
-                        Update
+                        {{$t('update')}}
                     </b-button>
                 </template>
             </b-table>
+                <b-pagination
+                    v-model="currentPage"
+                    :total-rows="totalRows"
+                    :per-page="perPage"
+                    align="fill"
+                    size="sm"
+                    class="my-0"
+                ></b-pagination>
   </card>
 </template>
 
@@ -50,7 +58,7 @@ export default {
                 ],
                 totalRows: 0,
                 currentPage: 1,
-                perPage: 10,
+                perPage: 5,
                 pageOptions: [5, 10, 15],
                 sortBy: '',
                 sortDesc: false,
@@ -79,6 +87,7 @@ export default {
       this.$store.dispatch('resume/fetchResume')
       setTimeout(() => {
         this.items = this.list
+        this.totalRows = this.list.length
       },500)
   },
  

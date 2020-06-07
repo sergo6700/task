@@ -1,0 +1,14 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([[17],{
+
+/***/ "./resources/js/lang/ru.json":
+/*!***********************************!*\
+  !*** ./resources/js/lang/ru.json ***!
+  \***********************************/
+/*! exports provided: ok, cancel, error_alert_title, error_alert_text, token_expired_alert_title, token_expired_alert_text, login, register, page_not_found, go_home, logout, email, remember_me, password, forgot_password, confirm_password, name, toggle_navigation, home, resume, you_are_logged_in, reset_password, send_password_reset_link, settings, profile, your_info, info_updated, update, your_password, password_updated, new_password, login_with, register_with, verify_email, send_verification_link, resend_verification_link, failed_to_verify_email, verify_email_address, list, default */
+/***/ (function(module) {
+
+eval("module.exports = {\"ok\":\"ОК\",\"cancel\":\"Отмена\",\"error_alert_title\":\"Что то не так...\",\"error_alert_text\":\"Что-то пошло не так! Пожалуйста, попробуйте еще раз.\",\"token_expired_alert_title\":\"Сессия истекла!\",\"token_expired_alert_text\":\"Пожалуйста, войдите снова, чтобы продолжить.\",\"login\":\"Войти\",\"register\":\"Регистр\",\"page_not_found\":\"Страница не найдена\",\"go_home\":\"Дом. страница\",\"logout\":\"Выйти\",\"email\":\"Email\",\"remember_me\":\"Запомнит меня\",\"password\":\"Пароль\",\"forgot_password\":\"Забыли Ваш пароль?\",\"confirm_password\":\"Подтвердите Пароль\",\"name\":\"Имя\",\"toggle_navigation\":\"Переключить навигацию\",\"home\":\"Дом. страница\",\"resume\":\"Резюме\",\"you_are_logged_in\":\"Вы вошли в систему!\",\"reset_password\":\"Сброс пароля\",\"send_password_reset_link\":\"Отправить ссылку для сброса пароля\",\"settings\":\"Настройки\",\"profile\":\"Профиль\",\"your_info\":\"Ваша информация\",\"info_updated\":\"Ваша информация была обновлена!\",\"update\":\"Обновить\",\"your_password\":\"Твой пароль\",\"password_updated\":\"Ваш пароль был обновлен!\",\"new_password\":\"Новый пароль\",\"login_with\":\"Войдите с\",\"register_with\":\"Зарегистрироваться\",\"verify_email\":\"Подтвердить Email\",\"send_verification_link\":\"Отправить ссылку для подтверждения\",\"resend_verification_link\":\"Переслать ссылку подтверждения?\",\"failed_to_verify_email\":\"Не удалось подтвердить электронную почту.\",\"verify_email_address\":\"Мы отправили вам письмо со ссылкой для подтверждения.\",\"list\":\"Д\"};//# sourceURL=[module]\n//# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IiIsImZpbGUiOiIuL3Jlc291cmNlcy9qcy9sYW5nL3J1Lmpzb24uanMiLCJzb3VyY2VSb290IjoiIn0=\n//# sourceURL=webpack-internal:///./resources/js/lang/ru.json\n");
+
+/***/ })
+
+}]);
