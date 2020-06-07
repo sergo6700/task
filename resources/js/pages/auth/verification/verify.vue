@@ -6,7 +6,6 @@
           <div class="alert alert-success" role="alert">
             {{ success }}
           </div>
-
           <router-link :to="{ name: 'login' }" class="btn btn-primary">
             {{ $t('login') }}
           </router-link>
@@ -15,7 +14,6 @@
           <div class="alert alert-danger" role="alert">
             {{ error || $t('failed_to_verify_email') }}
           </div>
-
           <router-link :to="{ name: 'verification.resend' }" class="small float-right">
             {{ $t('resend_verification_link') }}
           </router-link>
@@ -26,30 +24,34 @@
 </template>
 
 <script>
-import axios from 'axios'
+  import axios from 'axios'
 
-const qs = (params) => Object.keys(params).map(key => `${key}=${params[key]}`).join('&')
+  const qs = (params) => Object.keys(params).map(key => `${key}=${params[key]}`).join('&')
 
-export default {
-  middleware: 'guest',
+  export default {
+    middleware: 'guest',
 
-  metaInfo () {
-    return { title: this.$t('verify_email') }
-  },
+    metaInfo() {
+      return {title: this.$t('verify_email')}
+    },
 
-  async beforeRouteEnter (to, from, next) {
-    try {
-      const { data } = await axios.post(`/api/email/verify/${to.params.id}?${qs(to.query)}`)
+    async beforeRouteEnter(to, from, next) {
+      try {
+        const {data} = await axios.post(`/api/email/verify/${to.params.id}?${qs(to.query)}`)
 
-      next(vm => { vm.success = data.status })
-    } catch (e) {
-      next(vm => { vm.error = e.response.data.status })
-    }
-  },
+        next(vm => {
+          vm.success = data.status
+        })
+      } catch (e) {
+        next(vm => {
+          vm.error = e.response.data.status
+        })
+      }
+    },
 
-  data: () => ({
-    error: '',
-    success: ''
-  })
-}
+    data: () => ({
+      error: '',
+      success: ''
+    })
+  }
 </script>

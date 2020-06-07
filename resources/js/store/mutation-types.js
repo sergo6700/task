@@ -10,7 +10,7 @@ export const UPDATE_USER = 'UPDATE_USER'
 export const SET_LOCALE = 'SET_LOCALE'
 
 // resume.js
-export const FETCH_RESUME         = 'FETCH_RESUME'
+export const FETCH_RESUME = 'FETCH_RESUME'
 export const FETCH_RESUME_SUCCESS = 'FETCH_RESUME_SUCCESS'
 export const FETCH_RESUME_FAILURE = 'FETCH_RESUME_FAILURE'
-export const UPDATE_RESUME        = 'UPDATE_RESUME'
+export const UPDATE_RESUME = 'UPDATE_RESUME'

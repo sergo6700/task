@@ -22,7 +22,7 @@ axios.interceptors.request.use(request => {
 
 // Response interceptor
 axios.interceptors.response.use(response => response, error => {
-  const { status } = error.response
+  const {status} = error.response
   if (status >= 500) {
     Swal.fire({
       type: 'error',
@@ -34,7 +34,7 @@ axios.interceptors.response.use(response => response, error => {
     })
   }
 
-  if(status === 404){
+  if (status === 404) {
     Swal.fire({
       type: 'error',
       title: i18n.t('error_alert_title'),
@@ -43,7 +43,7 @@ axios.interceptors.response.use(response => response, error => {
       confirmButtonText: i18n.t('ok'),
       cancelButtonText: i18n.t('cancel')
     })
-    router.push({ name: 'resume.list' })
+    router.push({name: 'resume.list'})
   }
 
   if (status === 401 && store.getters['auth/check']) {
@@ -57,7 +57,7 @@ axios.interceptors.response.use(response => response, error => {
     }).then(() => {
       store.commit('auth/LOGOUT')
 
-      router.push({ name: 'login' })
+      router.push({name: 'login'})
     })
   }
 

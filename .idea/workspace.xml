@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="75ca222f-889c-4f6a-850c-a89d8b82dc64" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ForgotPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/LoginController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/OAuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/OAuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/RegisterController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/ResetPasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/UserController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/UserController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Auth/VerificationController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ResumeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ResumeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Settings/PasswordController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/PasswordController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/Settings/ProfileController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/Settings/ProfileController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/SpaController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/SpaController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/Authenticate.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/RedirectIfAuthenticated.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Middleware/SetLocale.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Middleware/SetLocale.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/StoreResume.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/StoreResume.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/ResetPassword.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/ResetPassword.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Notifications/VerifyEmail.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Notifications/VerifyEmail.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/App.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Button.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Button.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Card.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Card.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Checkbox.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Checkbox.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Child.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Child.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Loading.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Loading.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/LocaleDropdown.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/LocaleDropdown.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/Navbar.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/Navbar.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/components/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/components/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/lang/en.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/en.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/lang/ru.json" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/lang/ru.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/layouts/basic.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/basic.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/layouts/default.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/layouts/default.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/middleware/admin.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/middleware/admin.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/middleware/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/middleware/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/middleware/check-auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/middleware/check-auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/middleware/guest.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/middleware/guest.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/middleware/locale.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/middleware/locale.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/login.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/password/email.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/password/email.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/password/reset.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/password/reset.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/register.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/register.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/verification/resend.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/verification/resend.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/auth/verification/verify.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/auth/verification/verify.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/errors/404.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/errors/404.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/home.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/resume/create.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/resume/create.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/resume/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/resume/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/resume/list.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/resume/list.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/resume/update.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/resume/update.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/settings/index.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/settings/index.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/settings/password.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/settings/password.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/settings/profile.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/settings/profile.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/pages/welcome.vue" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/pages/welcome.vue" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/plugins/axios.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/plugins/axios.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/plugins/bootstrap.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/plugins/bootstrap.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/plugins/fontawesome.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/plugins/fontawesome.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/plugins/i18n.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/plugins/i18n.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/plugins/vee-validate.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/plugins/vee-validate.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/router/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/router/routes.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/router/routes.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/lang.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/lang.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/modules/resume.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/modules/resume.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/js/store/mutation-types.js" beforeDir="false" afterPath="$PROJECT_DIR$/resources/js/store/mutation-types.js" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings" synchronizationState="SYNCHRONIZE">
+    <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
+    <execution />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration">
+    <include_path>
+      <path value="$PROJECT_DIR$/vendor/symfony/finder" />
+      <path value="$PROJECT_DIR$/vendor/symfony/var-dumper" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-kernel" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-ctype" />
+      <path value="$PROJECT_DIR$/vendor/symfony/http-foundation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-mbstring" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php73" />
+      <path value="$PROJECT_DIR$/vendor/symfony/error-handler" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/phpunit" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-code-coverage" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-file-iterator" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-timer" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-text-template" />
+      <path value="$PROJECT_DIR$/vendor/phpunit/php-token-stream" />
+      <path value="$PROJECT_DIR$/vendor/phpspec/prophecy" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/manifest" />
+      <path value="$PROJECT_DIR$/vendor/phar-io/version" />
+      <path value="$PROJECT_DIR$/vendor/myclabs/deep-copy" />
+      <path value="$PROJECT_DIR$/vendor/monolog/monolog" />
+      <path value="$PROJECT_DIR$/vendor/mockery/mockery" />
+      <path value="$PROJECT_DIR$/vendor/laravel/socialite" />
+      <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/laravel/tinker" />
+      <path value="$PROJECT_DIR$/vendor/laravel/dusk" />
+      <path value="$PROJECT_DIR$/vendor/laravel/framework" />
+      <path value="$PROJECT_DIR$/vendor/egulias/email-validator" />
+      <path value="$PROJECT_DIR$/vendor/dnoegel/php-xdg-base-dir" />
+      <path value="$PROJECT_DIR$/vendor/vlucas/phpdotenv" />
+      <path value="$PROJECT_DIR$/vendor/scrivo/highlight.php" />
+      <path value="$PROJECT_DIR$/vendor/ramsey/uuid" />
+      <path value="$PROJECT_DIR$/vendor/nesbot/carbon" />
+      <path value="$PROJECT_DIR$/vendor/namshi/jose" />
+      <path value="$PROJECT_DIR$/vendor/league/flysystem" />
+      <path value="$PROJECT_DIR$/vendor/league/oauth1-client" />
+      <path value="$PROJECT_DIR$/vendor/league/commonmark" />
+      <path value="$PROJECT_DIR$/vendor/facade/flare-client-php" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition-contracts" />
+      <path value="$PROJECT_DIR$/vendor/facade/ignition" />
+      <path value="$PROJECT_DIR$/vendor/tymon/jwt-auth" />
+      <path value="$PROJECT_DIR$/vendor/nikic/php-parser" />
+      <path value="$PROJECT_DIR$/vendor/asm89/stack-cors" />
+      <path value="$PROJECT_DIR$/vendor/voku/portable-ascii" />
+      <path value="$PROJECT_DIR$/vendor/opis/closure" />
+      <path value="$PROJECT_DIR$/vendor/filp/whoops" />
+      <path value="$PROJECT_DIR$/vendor/psy/psysh" />
+      <path value="$PROJECT_DIR$/vendor/psr/log" />
+      <path value="$PROJECT_DIR$/vendor/psr/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/psr/container" />
+      <path value="$PROJECT_DIR$/vendor/psr/http-message" />
+      <path value="$PROJECT_DIR$/vendor/psr/simple-cache" />
+      <path value="$PROJECT_DIR$/vendor/composer" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-common" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/reflection-docblock" />
+      <path value="$PROJECT_DIR$/vendor/phpdocumentor/type-resolver" />
+      <path value="$PROJECT_DIR$/vendor/php-webdriver/webdriver" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-color" />
+      <path value="$PROJECT_DIR$/vendor/jakub-onderka/php-console-highlighter" />
+      <path value="$PROJECT_DIR$/vendor/dragonmantank/cron-expression" />
+      <path value="$PROJECT_DIR$/vendor/tijsverkoyen/css-to-inline-styles" />
+      <path value="$PROJECT_DIR$/vendor/swiftmailer/swiftmailer" />
+      <path value="$PROJECT_DIR$/vendor/nunomaduro/collision" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/guzzle" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/psr7" />
+      <path value="$PROJECT_DIR$/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/beyondcode/laravel-dump-server" />
+      <path value="$PROJECT_DIR$/vendor/webmozart/assert" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/type" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/code-unit-reverse-lookup" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/version" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-reflector" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/comparator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/environment" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/object-enumerator" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/exporter" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/diff" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/global-state" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/recursion-context" />
+      <path value="$PROJECT_DIR$/vendor/sebastian/resource-operations" />
+      <path value="$PROJECT_DIR$/vendor/ralouphie/getallheaders" />
+      <path value="$PROJECT_DIR$/vendor/phpoption/phpoption" />
+      <path value="$PROJECT_DIR$/vendor/paragonie/random_compat" />
+      <path value="$PROJECT_DIR$/vendor/fruitcake/laravel-cors" />
+      <path value="$PROJECT_DIR$/vendor/fideloper/proxy" />
+      <path value="$PROJECT_DIR$/vendor/lcobucci/jwt" />
+      <path value="$PROJECT_DIR$/vendor/hamcrest/hamcrest-php" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/inflector" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/dbal" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/lexer" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/event-manager" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/cache" />
+      <path value="$PROJECT_DIR$/vendor/doctrine/instantiator" />
+      <path value="$PROJECT_DIR$/vendor/theseer/tokenizer" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-intl-idn" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-util" />
+      <path value="$PROJECT_DIR$/vendor/symfony/event-dispatcher-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-iconv" />
+      <path value="$PROJECT_DIR$/vendor/symfony/css-selector" />
+      <path value="$PROJECT_DIR$/vendor/symfony/routing" />
+      <path value="$PROJECT_DIR$/vendor/symfony/mime" />
+      <path value="$PROJECT_DIR$/vendor/symfony/process" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php56" />
+      <path value="$PROJECT_DIR$/vendor/symfony/service-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation-contracts" />
+      <path value="$PROJECT_DIR$/vendor/symfony/translation" />
+      <path value="$PROJECT_DIR$/vendor/symfony/console" />
+    </include_path>
+  </component>
+  <component name="ProjectId" id="1czMmt9Vd4JEA6qcx34otl0lHxL" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RunManager">
+    <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
+      <TestRunner scope="XML" />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="75ca222f-889c-4f6a-850c-a89d8b82dc64" name="Default Changelist" comment="" />
+      <created>1591527130122</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1591527130122</updated>
+      <workItem from="1591527131880" duration="981000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="2" />
+  </component>
+</project>

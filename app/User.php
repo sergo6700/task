@@ -4,12 +4,13 @@ namespace App;
 
 use App\Notifications\ResetPassword;
 use App\Notifications\VerifyEmail;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Tymon\JWTAuth\Contracts\JWTSubject;
 
-class User extends Authenticatable implements JWTSubject , MustVerifyEmail
+class User extends Authenticatable implements JWTSubject, MustVerifyEmail
 {
     use Notifiable;
 
@@ -56,13 +57,13 @@ class User extends Authenticatable implements JWTSubject , MustVerifyEmail
      */
     public function getPhotoUrlAttribute()
     {
-        return 'https://www.gravatar.com/avatar/'.md5(strtolower($this->email)).'.jpg?s=200&d=mm';
+        return 'https://www.gravatar.com/avatar/' . md5(strtolower($this->email)) . '.jpg?s=200&d=mm';
     }
 
     /**
      * Get the oauth providers.
      *
-     * @return \Illuminate\Database\Eloquent\Relations\HasMany
+     * @return HasMany
      */
     public function oauthProviders()
     {
@@ -72,7 +73,7 @@ class User extends Authenticatable implements JWTSubject , MustVerifyEmail
     /**
      * Send the password reset notification.
      *
-     * @param  string  $token
+     * @param string $token
      * @return void
      */
     public function sendPasswordResetNotification($token)

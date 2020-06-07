@@ -3,31 +3,28 @@
     <div class="col-lg-8 m-auto">
       <card :title="$t('reset_password')">
         <ValidationObserver v-slot="{ handleSubmit }">
-
-        <form @submit.prevent="handleSubmit(send)" @keydown="form.onKeydown($event)">
-          <alert-success :form="form" :message="status" />
-
-          <ValidationProvider name="email" rules="required|email" v-slot="{ errors }">
+          <form @submit.prevent="handleSubmit(send)" @keydown="form.onKeydown($event)">
+            <alert-success :form="form" :message="status"/>
+            <ValidationProvider name="email" rules="required|email" v-slot="{ errors }">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
+                <div class="col-md-7">
+                  <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control"
+                         type="email" name="email">
+                  <has-error :form="form" field="email"/>
+                  <span class="text-danger">{{ errors[0] }}</span>
+                </div>
+              </div>
+            </ValidationProvider>
+            <!-- Submit Button -->
             <div class="form-group row">
-              <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
-              <div class="col-md-7">
-                <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
-                <has-error :form="form" field="email" />
-                <span class="text-danger">{{ errors[0] }}</span>
+              <div class="col-md-9 ml-md-auto">
+                <v-button :loading="form.busy">
+                  {{ $t('send_password_reset_link') }}
+                </v-button>
               </div>
             </div>
-          </ValidationProvider>
-
-
-          <!-- Submit Button -->
-          <div class="form-group row">
-            <div class="col-md-9 ml-md-auto">
-              <v-button :loading="form.busy">
-                {{ $t('send_password_reset_link') }}
-              </v-button>
-            </div>
-          </div>
-        </form>
+          </form>
         </ValidationObserver>
       </card>
     </div>
@@ -35,30 +32,30 @@
 </template>
 
 <script>
-import Form from 'vform'
+  import Form from 'vform'
 
-export default {
-  middleware: 'guest',
+  export default {
+    middleware: 'guest',
 
-  metaInfo () {
-    return { title: this.$t('reset_password') }
-  },
+    metaInfo() {
+      return {title: this.$t('reset_password')}
+    },
 
-  data: () => ({
-    status: '',
-    form: new Form({
-      email: ''
-    })
-  }),
+    data: () => ({
+      status: '',
+      form: new Form({
+        email: ''
+      })
+    }),
 
-  methods: {
-    async send () {
-      const { data } = await this.form.post('/api/password/email')
+    methods: {
+      async send() {
+        const {data} = await this.form.post('/api/password/email')
 
-      this.status = data.status
+        this.status = data.status
 
-      this.form.reset()
+        this.form.reset()
+      }
     }
   }
-}
 </script>

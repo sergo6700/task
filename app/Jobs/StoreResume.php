@@ -18,7 +18,7 @@ class StoreResume implements ShouldQueue
     /**
      * Create a new job instance.
      *
-     * @return void
+     * @param Resume $resume
      */
     public function __construct(Resume $resume)
     {

@@ -28,7 +28,7 @@ class OAuthController extends Controller
     /**
      * Redirect the user to the provider authentication page.
      *
-     * @param  string $provider
+     * @param string $provider
      * @return \Illuminate\Http\RedirectResponse
      */
     public function redirectToProvider($provider)
@@ -41,7 +41,7 @@ class OAuthController extends Controller
     /**
      * Obtain the user information from the provider.
      *
-     * @param  string $driver
+     * @param string $driver
      * @return \Illuminate\Http\Response
      */
     public function handleProviderCallback($provider)
@@ -61,8 +61,8 @@ class OAuthController extends Controller
     }
 
     /**
-     * @param  string $provider
-     * @param  \Laravel\Socialite\Contracts\User $sUser
+     * @param string $provider
+     * @param \Laravel\Socialite\Contracts\User $sUser
      * @return \App\User|false
      */
     protected function findOrCreateUser($provider, $user)
@@ -88,8 +88,8 @@ class OAuthController extends Controller
     }
 
     /**
-     * @param  string $provider
-     * @param  \Laravel\Socialite\Contracts\User $sUser
+     * @param string $provider
+     * @param \Laravel\Socialite\Contracts\User $sUser
      * @return \App\User
      */
     protected function createUser($provider, $sUser)

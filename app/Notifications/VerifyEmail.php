@@ -22,10 +22,11 @@ class VerifyEmail extends Notification implements ShouldQueue
         $this->queue = 'email';
         //$this->connection = 'verify';
     }
+
     /**
      * Get the verification URL for the given notifiable.
      *
-     * @param  mixed  $notifiable
+     * @param mixed $notifiable
      * @return string
      */
     protected function verificationUrl($notifiable)

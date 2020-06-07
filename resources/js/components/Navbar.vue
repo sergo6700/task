@@ -5,13 +5,14 @@
         {{ appName }}
       </router-link>
 
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false">
-        <span class="navbar-toggler-icon" />
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler"
+              aria-controls="navbarToggler" aria-expanded="false">
+        <span class="navbar-toggler-icon"/>
       </button>
 
       <div id="navbarToggler" class="collapse navbar-collapse">
         <ul class="navbar-nav">
-          <locale-dropdown />
+          <locale-dropdown/>
           <!-- <li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li> -->
@@ -28,17 +29,17 @@
             </a>
             <div class="dropdown-menu">
               <router-link :to="{ name: 'settings.profile' }" class="dropdown-item pl-3">
-                <fa icon="cog" fixed-width />
+                <fa icon="cog" fixed-width/>
                 {{ $t('settings') }}
               </router-link>
               <router-link :to="{ name: 'resume.list' }" class="dropdown-item pl-3">
-                <fa icon="cog" fixed-width />
+                <fa icon="cog" fixed-width/>
                 {{ $t('resume') }}
               </router-link>
 
-              <div class="dropdown-divider" />
+              <div class="dropdown-divider"/>
               <a href="#" class="dropdown-item pl-3" @click.prevent="logout">
-                <fa icon="sign-out-alt" fixed-width />
+                <fa icon="sign-out-alt" fixed-width/>
                 {{ $t('logout') }}
               </a>
             </div>
@@ -63,38 +64,38 @@
 </template>
 
 <script>
-import { mapGetters } from 'vuex'
-import LocaleDropdown from './LocaleDropdown'
+  import {mapGetters} from 'vuex'
+  import LocaleDropdown from './LocaleDropdown'
 
-export default {
-  components: {
-    LocaleDropdown
-  },
+  export default {
+    components: {
+      LocaleDropdown
+    },
 
-  data: () => ({
-    appName: window.config.appName
-  }),
+    data: () => ({
+      appName: window.config.appName
+    }),
 
-  computed: mapGetters({
-    user: 'auth/user'
-  }),
+    computed: mapGetters({
+      user: 'auth/user'
+    }),
 
-  methods: {
-    async logout () {
-      // Log out the user.
-      await this.$store.dispatch('auth/logout')
+    methods: {
+      async logout() {
+        // Log out the user.
+        await this.$store.dispatch('auth/logout')
 
-      // Redirect to login.
-      this.$router.push({ name: 'login' })
+        // Redirect to login.
+        this.$router.push({name: 'login'})
+      }
     }
   }
-}
 </script>
 
 <style scoped>
-.profile-photo {
-  width: 2rem;
-  height: 2rem;
-  margin: -.375rem 0;
-}
+  .profile-photo {
+    width: 2rem;
+    height: 2rem;
+    margin: -.375rem 0;
+  }
 </style>
