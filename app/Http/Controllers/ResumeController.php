@@ -81,7 +81,7 @@ class ResumeController extends Controller
             $resume->get();
             return $resume;
         }
-        return 404;
+        return response()->json("Not Found",404);
     }
 
     /**
@@ -97,7 +97,7 @@ class ResumeController extends Controller
         if($resume)
             $resume->update($request->all());
         else
-            return 404;
+            return response()->json("Not Found",404);
     }
 
     /**
@@ -111,8 +111,9 @@ class ResumeController extends Controller
         $resume = Resume::findOrFail($id);
         if($resume){
             $resume->destroy($id);
-            return '200';
+            return response()->json("Success",200);        
         }
-        return '500';
+        return response()->json("Not Found",404);        
+
     }
 }

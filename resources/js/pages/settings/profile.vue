@@ -1,25 +1,32 @@
 <template>
   <card :title="$t('your_info')">
-    <form @submit.prevent="update" @keydown="form.onKeydown($event)">
+   <ValidationObserver v-slot="{ handleSubmit }">
+    <form @submit.prevent="handleSubmit(update)" @keydown="form.onKeydown($event)">
       <alert-success :form="form" :message="$t('info_updated')" />
 
-      <!-- Name -->
-      <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
-        <div class="col-md-7">
-          <input v-model="form.name" :class="{ 'is-invalid': form.errors.has('name') }" class="form-control" type="text" name="name">
-          <has-error :form="form" field="name" />
-        </div>
-      </div>
+     <!-- Name -->
+            <ValidationProvider name="name" rules="required" v-slot="{ errors }">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label text-md-right">{{ $t('name') }}</label>
+                <div class="col-md-7">
+                  <input v-model="form.name" :class="{  'is-invalid': form.errors.has('name')  }" class="form-control" type="text" name="name">
+                  <has-error :form="form" field="name" />
+                <span class="text-danger">{{ errors[0] }}</span>
+                </div>
+              </div>
+            </ValidationProvider>
 
-      <!-- Email -->
-      <div class="form-group row">
-        <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
-        <div class="col-md-7">
-          <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
-          <has-error :form="form" field="email" />
-        </div>
-      </div>
+            <!-- Email -->
+            <ValidationProvider name="email" rules="required|email" v-slot="{ errors }">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
+                <div class="col-md-7">
+                  <input v-model="form.email" :class="{  'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
+                  <has-error :form="form" field="email" />
+                  <span class="text-danger">{{ errors[0] }}</span>
+                </div>
+              </div>
+            </ValidationProvider>   
 
       <!-- Submit Button -->
       <div class="form-group row">
@@ -30,6 +37,7 @@
         </div>
       </div>
     </form>
+   </ValidationObserver>
   </card>
 </template>
 

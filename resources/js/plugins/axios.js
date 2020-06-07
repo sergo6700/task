@@ -16,7 +16,6 @@ axios.interceptors.request.use(request => {
     request.headers.common['Accept-Language'] = locale
   }
 
-  // request.headers['X-Socket-Id'] = Echo.socketId()
 
   return request
 })
@@ -24,7 +23,6 @@ axios.interceptors.request.use(request => {
 // Response interceptor
 axios.interceptors.response.use(response => response, error => {
   const { status } = error.response
-
   if (status >= 500) {
     Swal.fire({
       type: 'error',
@@ -34,6 +32,18 @@ axios.interceptors.response.use(response => response, error => {
       confirmButtonText: i18n.t('ok'),
       cancelButtonText: i18n.t('cancel')
     })
+  }
+
+  if(status === 404){
+    Swal.fire({
+      type: 'error',
+      title: i18n.t('error_alert_title'),
+      text: i18n.t('error_alert_text'),
+      reverseButtons: true,
+      confirmButtonText: i18n.t('ok'),
+      cancelButtonText: i18n.t('cancel')
+    })
+    router.push({ name: 'resume.list' })
   }
 
   if (status === 401 && store.getters['auth/check']) {

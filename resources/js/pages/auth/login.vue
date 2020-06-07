@@ -2,24 +2,31 @@
   <div class="row">
     <div class="col-lg-8 m-auto">
       <card :title="$t('login')">
-        <form @submit.prevent="login" @keydown="form.onKeydown($event)">
+      <ValidationObserver v-slot="{ handleSubmit }">
+        <form @submit.prevent="handleSubmit(login)" @keydown="form.onKeydown($event)">
           <!-- Email -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
-              <has-error :form="form" field="email" />
+          <ValidationProvider name="email" rules="required|email" v-slot="{ errors }">
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
+              <div class="col-md-7">
+                <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
+                <has-error :form="form" field="email" />
+                <span class="text-danger">{{ errors[0] }}</span>
+              </div>
             </div>
-          </div>
+          </ValidationProvider>
 
           <!-- Password -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('password') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
-              <has-error :form="form" field="password" />
+          <ValidationProvider name="password" rules="required|min:6" v-slot="{errors}">
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label text-md-right">{{ $t('password') }}</label>
+              <div class="col-md-7">
+                <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control" type="password" name="password">
+                <has-error :form="form" field="password" />
+                <span class="text-danger">{{ errors[0] }}</span>
+              </div>
             </div>
-          </div>
+          </ValidationProvider>
 
           <!-- Remember Me -->
           <div class="form-group row">
@@ -44,6 +51,7 @@
             </div>
           </div>
         </form>
+      </ValidationObserver>
       </card>
     </div>
   </div>

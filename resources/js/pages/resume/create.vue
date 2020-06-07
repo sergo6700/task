@@ -1,52 +1,70 @@
 <template>
   <card :title="$t('resume')">
-    <form @submit.prevent="resume_create" @keydown="form.onKeydown($event)">
+  <ValidationObserver v-slot="{ handleSubmit }">
+    <form @submit.prevent="handleSubmit(resume_create)" @keydown="form.onKeydown($event)">
+  
           <!-- First Name -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('first_name') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.first_name" :class="{ 'is-invalid': form.errors.has('first_name') }" class="form-control" type="text" name="first_name">
-              <has-error :form="form" field="first_name" />
+          <ValidationProvider name="first_name" rules="required" v-slot="{ errors }">
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label text-md-right">{{ $t('first_name') }}</label>
+              <div class="col-md-7">
+                <input v-model="form.first_name" :class="{ 'is-invalid': form.errors.has('first_name') }" class="form-control" type="text" name="first_name">
+                <has-error :form="form" field="first_name" />
+                <span class="text-danger">{{ errors[0] }}</span>
+              </div>
             </div>
-          </div>
+          </ValidationProvider>
 
           <!-- Last Name -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('last_name') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.last_name" :class="{ 'is-invalid': form.errors.has('last_name') }" class="form-control" type="text" name="last_name">
-              <has-error :form="form" field="last_name" />
+          <ValidationProvider name="last_name" rules="required" v-slot="{ errors }">
+            <div class="form-group row">
+              <label class="col-md-3 col-form-label text-md-right">{{ $t('last_name') }}</label>
+              <div class="col-md-7">
+                <input v-model="form.last_name" :class="{ 'is-invalid': form.errors.has('last_name') }" class="form-control" type="text" name="last_name">
+                <has-error :form="form" field="last_name" />
+                <span class="text-danger">{{ errors[0] }}</span>
+              </div>
             </div>
-          </div>
+          </ValidationProvider>
 
-          <!-- Email -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
-              <has-error :form="form" field="email" />
-            </div>
-          </div>
+
+           <!-- Email -->
+            <ValidationProvider name="email" rules="required|email" v-slot="{ errors }">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label text-md-right">{{ $t('email') }}</label>
+                <div class="col-md-7">
+                  <input v-model="form.email" :class="{  'is-invalid': form.errors.has('email') }" class="form-control" type="email" name="email">
+                  <has-error :form="form" field="email" />
+                  <span class="text-danger">{{ errors[0] }}</span>
+                </div>
+              </div>
+            </ValidationProvider>
 
           <!-- Job -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('job') }}</label>
-            <div class="col-md-7">
-              <input v-model="form.job" :class="{ 'is-invalid': form.errors.has('job') }" class="form-control" type="text" name="job">
-              <has-error :form="form" field="job" />
-            </div>
-          </div>
+            <ValidationProvider name="job" rules="required" v-slot="{ errors }">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label text-md-right">{{ $t('job') }}</label>
+                <div class="col-md-7">
+                  <input v-model="form.job" :class="{ 'is-invalid': form.errors.has('job') }" class="form-control" type="text" name="job">
+                  <has-error :form="form" field="job" />
+                  <span class="text-danger">{{ errors[0] }}</span>
+                </div>
+              </div>
+            </ValidationProvider>
 
           <!-- About Me -->
-          <div class="form-group row">
-            <label class="col-md-3 col-form-label text-md-right">{{ $t('about') }}</label>
-            <div class="col-md-7">
-              <textarea :class="{ 'is-invalid': form.errors.has('about') }" rows="8" v-model="form.about" class="form-control"  name="about">
-                  {{form.about}}
-              </textarea>
-              <has-error :form="form" field="about" />
-            </div>
-          </div>
+            <ValidationProvider name="about" rules="required" v-slot="{ errors }">
+              <div class="form-group row">
+                <label class="col-md-3 col-form-label text-md-right">{{ $t('about') }}</label>
+                <div class="col-md-7">
+                  <textarea :class="{ 'is-invalid': form.errors.has('about') }" rows="8" v-model="form.about" class="form-control"  name="about">
+                      {{form.about}}
+                  </textarea>
+                  <has-error :form="form" field="about" />
+                  <span class="text-danger">{{ errors[0] }}</span>
+                </div>
+              </div>
+            </ValidationProvider>
 
           <div class="form-group row">
             <div class="col-md-7 offset-md-3 d-flex">
@@ -58,6 +76,7 @@
             </div>
           </div>
         </form>
+  </ValidationObserver>
   </card>
 </template>
 
@@ -101,6 +120,8 @@ export default {
             'error'
           )
         }
+      }).catch((result) => {
+        
       })
       }
   }

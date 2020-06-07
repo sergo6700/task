@@ -1,4 +1,5 @@
 import './axios'
 import './fontawesome'
 import './bootstrap'
+import './vee-validate'
 import 'bootstrap'

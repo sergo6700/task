@@ -31,7 +31,7 @@ export const mutations = {
   },
 
   [types.FETCH_RESUME_FAILURE] (state) {
-     window.location.href = '/resume'
+    console.log('error')
   },
 }
 
