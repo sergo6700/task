@@ -33,14 +33,14 @@ class LoginController extends Controller
     {
         $token = $this->guard()->attempt($this->credentials($request));
 
-        if (!$token) {
+        if (!$token) 
             return false;
-        }
+        
 
         $user = $this->guard()->user();
-        if ($user instanceof MustVerifyEmail && !$user->hasVerifiedEmail()) {
+        if ($user instanceof MustVerifyEmail && !$user->hasVerifiedEmail()) 
             return false;
-        }
+        
 
         $this->guard()->setToken($token);
 
@@ -57,13 +57,13 @@ class LoginController extends Controller
     {
         $this->clearLoginAttempts($request);
 
-        $token = (string)$this->guard()->getToken();
+        $token      = (string)$this->guard()->getToken();
         $expiration = $this->guard()->getPayload()->get('exp');
 
         return response()->json([
-            'token' => $token,
-            'token_type' => 'bearer',
-            'expires_in' => $expiration - time(),
+            'token'         => $token,
+            'token_type'    => 'bearer',
+            'expires_in'    => $expiration - time(),
         ]);
     }
 
@@ -78,9 +78,9 @@ class LoginController extends Controller
     protected function sendFailedLoginResponse(Request $request)
     {
         $user = $this->guard()->user();
-        if ($user instanceof MustVerifyEmail && !$user->hasVerifiedEmail()) {
+        if ($user instanceof MustVerifyEmail && !$user->hasVerifiedEmail()) 
             throw VerifyEmailException::forUser($user);
-        }
+        
 
         throw ValidationException::withMessages([
             $this->username() => [trans('auth.failed')],

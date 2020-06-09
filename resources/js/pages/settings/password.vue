@@ -13,7 +13,7 @@
               <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }" class="form-control"
                      type="password" name="password">
               <has-error :form="form" field="password"/>
-              <span class="text-danger">{{ errors[0] }}</span>
+              <span class="text-danger"><small>{{ errors[0] }}</small></span>
             </div>
           </div>
         </ValidationProvider>
@@ -27,7 +27,7 @@
                      :class="{'is-invalid': form.errors.has('password_confirmation') }" class="form-control"
                      type="password" name="password_confirmation">
               <has-error :form="form" field="password_confirmation"/>
-              <span class="text-danger">{{ errors[0] }}</span>
+              <span class="text-danger"><small>{{ errors[0] }}</small></span>
             </div>
           </div>
         </ValidationProvider>
@@ -57,8 +57,8 @@
 
     data: () => ({
       form: new Form({
-        password: '',
-        password_confirmation: ''
+        password              : '',
+        password_confirmation : ''
       })
     }),
 

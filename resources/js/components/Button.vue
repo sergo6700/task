@@ -16,28 +16,28 @@
 
     props: {
       type: {
-        type: String,
-        default: 'primary'
+        type    : String,
+        default : 'primary'
       },
 
       nativeType: {
-        type: String,
-        default: 'submit'
+        type    : String,
+        default : 'submit'
       },
 
       loading: {
-        type: Boolean,
-        default: false
+        type    : Boolean,
+        default : false
       },
 
       block: {
-        type: Boolean,
-        default: false
+        type    : Boolean,
+        default : false
       },
 
       large: {
-        type: Boolean,
-        default: false
+        type    : Boolean,
+        default : false
       }
     }
   }

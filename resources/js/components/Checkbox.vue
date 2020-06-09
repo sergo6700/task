@@ -19,10 +19,10 @@
     name: 'Checkbox',
 
     props: {
-      id: {type: String, default: null},
-      name: {type: String, default: 'checkbox'},
-      value: {type: Boolean, default: false},
-      checked: {type: Boolean, default: false}
+      id      : {type: String, default: null},
+      name    : {type: String, default: 'checkbox'},
+      value   : {type: Boolean, default: false},
+      checked : {type: Boolean, default: false}
     },
 
     data: () => ({

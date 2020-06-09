@@ -18,9 +18,9 @@ export async function loadMessages(locale) {
     i18n.setLocaleMessage(locale, messages)
   }
 
-  if (i18n.locale !== locale) {
+  if (i18n.locale !== locale) 
     i18n.locale = locale
-  }
+  
 }
 
 ;(async function () {

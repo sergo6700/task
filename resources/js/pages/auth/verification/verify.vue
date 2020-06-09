@@ -44,14 +44,14 @@
         })
       } catch (e) {
         next(vm => {
-          vm.error = e.response.data.status
+          vm.error   = e.response.data.status
         })
       }
     },
 
     data: () => ({
-      error: '',
-      success: ''
+      error   : '',
+      success : ''
     })
   }
 </script>

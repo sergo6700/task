@@ -12,7 +12,7 @@
               <input v-model="form.name" :class="{  'is-invalid': form.errors.has('name')  }" class="form-control"
                      type="text" name="name">
               <has-error :form="form" field="name"/>
-              <span class="text-danger">{{ errors[0] }}</span>
+              <span class="text-danger"><small>{{ errors[0] }}</small></span>
             </div>
           </div>
         </ValidationProvider>
@@ -25,7 +25,7 @@
               <input v-model="form.email" :class="{  'is-invalid': form.errors.has('email') }" class="form-control"
                      type="email" name="email">
               <has-error :form="form" field="email"/>
-              <span class="text-danger">{{ errors[0] }}</span>
+              <span class="text-danger"><small>{{ errors[0] }}</small></span>
             </div>
           </div>
         </ValidationProvider>
@@ -44,7 +44,7 @@
 </template>
 
 <script>
-  import Form from 'vform'
+  import Form         from 'vform'
   import {mapGetters} from 'vuex'
 
   export default {
@@ -56,8 +56,8 @@
 
     data: () => ({
       form: new Form({
-        name: '',
-        email: ''
+        name  : '',
+        email : ''
       })
     }),
 
@@ -74,9 +74,13 @@
 
     methods: {
       async update() {
-        const {data} = await this.form.patch('/api/settings/profile')
+        try{
+          const {data} = await this.form.patch('/api/settings/profile')
+          this.$store.dispatch('auth/updateUser', {user: data})
+        }
+        catch{
 
-        this.$store.dispatch('auth/updateUser', {user: data})
+        }
       }
     }
   }

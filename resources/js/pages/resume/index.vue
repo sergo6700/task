@@ -28,14 +28,14 @@
       tabs() {
         return [
           {
-            icon: 'cog',
-            name: this.$t('list'),
-            route: 'resume.list'
+            icon  : 'cog',
+            name  : this.$t('list'),
+            route : 'resume.list'
           },
           {
-            icon: 'cog',
-            name: this.$t('create'),
-            route: 'resume.create'
+            icon  : 'cog',
+            name  : this.$t('create'),
+            route : 'resume.create'
           },
         ]
       }

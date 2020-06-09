@@ -46,9 +46,9 @@
 
 <style scoped>
   .top-right {
-    position: absolute;
-    right: 10px;
-    top: 18px;
+    position  : absolute;
+    right     : 10px;
+    top       : 18px;
   }
 
   .title {

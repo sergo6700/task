@@ -5,14 +5,14 @@ const {locale, locales} = window.config
 
 // state
 export const state = {
-  locale: Cookies.get('locale') || locale,
-  locales: locales
+  locale    : Cookies.get('locale') || locale,
+  locales   : locales
 }
 
 // getters
 export const getters = {
-  locale: state => state.locale,
-  locales: state => state.locales
+  locale    : state => state.locale,
+  locales   : state => state.locales
 }
 
 // mutations

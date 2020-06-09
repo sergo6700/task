@@ -20,9 +20,9 @@
   import {loadMessages} from '~/plugins/i18n'
 
   export default {
-    computed: mapGetters({
-      locale: 'lang/locale',
-      locales: 'lang/locales'
+    computed  : mapGetters({
+      locale  : 'lang/locale',
+      locales : 'lang/locales'
     }),
 
     methods: {

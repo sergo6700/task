@@ -12,19 +12,20 @@
   // https://github.com/nuxt/nuxt.js/blob/master/lib/app/components/nuxt-loading.vue
   export default {
     data: () => ({
-      percent: 0,
-      show: false,
-      canSuccess: true,
-      duration: 3000,
-      height: '2px',
-      color: '#77b6ff',
-      failedColor: 'red'
+      percent     : 0,
+      show        : false,
+      canSuccess  : true,
+      duration    : 3000,
+      height      : '2px',
+      color       : '#77b6ff',
+      failedColor : 'red'
     }),
 
     methods: {
       start() {
-        this.show = true
+        this.show       = true
         this.canSuccess = true
+        
         if (this._timer) {
           clearInterval(this._timer)
           this.percent = 0

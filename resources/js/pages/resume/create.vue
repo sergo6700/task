@@ -10,7 +10,7 @@
               <input v-model="form.first_name" :class="{ 'is-invalid': form.errors.has('first_name') }"
                      class="form-control" type="text" name="first_name">
               <has-error :form="form" field="first_name"/>
-              <span class="text-danger">{{ errors[0] }}</span>
+              <span class="text-danger"><small>{{ errors[0] }}</small></span>
             </div>
           </div>
         </ValidationProvider>
@@ -22,7 +22,7 @@
               <input v-model="form.last_name" :class="{ 'is-invalid': form.errors.has('last_name') }"
                      class="form-control" type="text" name="last_name">
               <has-error :form="form" field="last_name"/>
-              <span class="text-danger">{{ errors[0] }}</span>
+              <span class="text-danger"><small>{{ errors[0] }}</small></span>
             </div>
           </div>
         </ValidationProvider>
@@ -34,7 +34,7 @@
               <input v-model="form.email" :class="{  'is-invalid': form.errors.has('email') }" class="form-control"
                      type="email" name="email">
               <has-error :form="form" field="email"/>
-              <span class="text-danger">{{ errors[0] }}</span>
+              <span class="text-danger"><small>{{ errors[0] }}</small></span>
             </div>
           </div>
         </ValidationProvider>
@@ -46,7 +46,7 @@
               <input v-model="form.job" :class="{ 'is-invalid': form.errors.has('job') }" class="form-control"
                      type="text" name="job">
               <has-error :form="form" field="job"/>
-              <span class="text-danger">{{ errors[0] }}</span>
+              <span class="text-danger"><small>{{ errors[0] }}</small></span>
             </div>
           </div>
         </ValidationProvider>
@@ -60,7 +60,7 @@
                       {{form.about}}
                   </textarea>
               <has-error :form="form" field="about"/>
-              <span class="text-danger">{{ errors[0] }}</span>
+              <span class="text-danger"><small>{{ errors[0] }}</small></span>
             </div>
           </div>
         </ValidationProvider>
@@ -90,11 +90,11 @@
 
     data: () => ({
       form: new Form({
-        first_name: '',
-        last_name: '',
-        email: '',
-        job: '',
-        about: '',
+        first_name  : '',
+        last_name   : '',
+        email       : '',
+        job         : '',
+        about       : '',
       }),
       mustVerifyEmail: false
     }),

@@ -49,22 +49,22 @@
     data: () => ({
       items: null,
       fields: [
-        {key: 'id', label: '#', sortable: true, sortDirection: 'desc'},
-        {key: 'first_name', label: 'Person  Name', sortable: true, sortDirection: 'desc'},
-        {key: 'job', label: 'Person  Job', sortable: true, sortDirection: 'desc'},
-        {key: 'email', label: 'Person email', sortable: true, class: 'text-center'},
-        {key: 'delete', label: 'Delete'},
-        {key: 'update', label: 'Update'}
+        {key: 'id',         label: '#',             sortable: true, sortDirection: 'desc'},
+        {key: 'first_name', label: 'Person  Name',  sortable: true, sortDirection: 'desc'},
+        {key: 'job',        label: 'Person  Job',   sortable: true, sortDirection: 'desc'},
+        {key: 'email',      label: 'Person email',  sortable: true, class: 'text-center'},
+        {key: 'delete',     label: 'Delete'},
+        {key: 'update',     label: 'Update'}
       ],
-      totalRows: 0,
-      currentPage: 1,
-      perPage: 5,
-      pageOptions: [5, 10, 15],
-      sortBy: '',
-      sortDesc: false,
-      sortDirection: 'asc',
-      filter: null,
-      filterOn: [],
+      totalRows       : 0,
+      currentPage     : 1,
+      perPage         : 5,
+      pageOptions     : [5, 10, 15],
+      sortBy          : '',
+      sortDesc        : false,
+      sortDirection   : 'asc',
+      filter          : null,
+      filterOn        : [],
     }),
 
 
@@ -78,15 +78,15 @@
           })
       },
       ...mapGetters({
-        list: 'resume/data',
-        status: 'resume/status'
+        list    : 'resume/data',
+        status  : 'resume/status'
       })
     },
 
     mounted() {
       this.$store.dispatch('resume/fetchResume')
       setTimeout(() => {
-        this.items = this.list
+        this.items     = this.list
         this.totalRows = this.list.length
       }, 500)
     },
@@ -98,23 +98,23 @@
     methods: {
       onFiltered(filteredItems) {
         // Trigger pagination to update the number of buttons/pages due to filtering
-        this.totalRows = filteredItems.length;
+        this.totalRows   = filteredItems.length;
         this.currentPage = 1;
       },
       deleteUser(id) {
         Swal.fire({
-          title: 'Are you sure?',
-          text: "You won't be able to revert this!",
-          icon: 'question',
-          showCancelButton: true,
-          confirmButtonText: 'Yes, delete it!',
-          cancelButtonText: 'No, cancel!',
+          title             : 'Are you sure?',
+          text              : "You won't be able to revert this!",
+          icon              : 'question',
+          showCancelButton  : true,
+          confirmButtonText : 'Yes, delete it!',
+          cancelButtonText  : 'No, cancel!',
           reverseButtons: true
         }).then((result) => {
           if (result.value) {
             this.$store.dispatch('resume/deleteResume', id)
             setTimeout(() => {
-              if (this.status == '200') {
+              if (this.status === 200) {
                 Swal.fire(
                   'Deleted!',
                   'Resume has been deleted :(',

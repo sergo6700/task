@@ -12,7 +12,7 @@
                   <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control"
                          type="email" name="email">
                   <has-error :form="form" field="email"/>
-                  <span class="text-danger">{{ errors[0] }}</span>
+                  <span class="text-danger"><small>{{ errors[0] }}</small></span>
                 </div>
               </div>
             </ValidationProvider>
@@ -50,11 +50,14 @@
 
     methods: {
       async send() {
-        const {data} = await this.form.post('/api/password/email')
+        try{
+          const {data}  = await this.form.post('/api/password/email')
+          this.status   = data.status 
+        }
+        catch{
 
-        this.status = data.status
-
-        this.form.reset()
+        }
+        // this.form.reset()
       }
     }
   }

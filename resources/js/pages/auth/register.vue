@@ -17,7 +17,7 @@
                   <input v-model="form.name" :class="{  'is-invalid': form.errors.has('name')  }" class="form-control"
                          type="text" name="name">
                   <has-error :form="form" field="name"/>
-                  <span class="text-danger">{{ errors[0] }}</span>
+                  <span class="text-danger"><small>{{ errors[0] }}</small></span>
                 </div>
               </div>
             </ValidationProvider>
@@ -29,7 +29,7 @@
                   <input v-model="form.email" :class="{  'is-invalid': form.errors.has('email') }" class="form-control"
                          type="email" name="email">
                   <has-error :form="form" field="email"/>
-                  <span class="text-danger">{{ errors[0] }}</span>
+                  <span class="text-danger"><small>{{ errors[0] }}</small></span>
                 </div>
               </div>
             </ValidationProvider>
@@ -41,7 +41,7 @@
                   <input v-model="form.password" :class="{ 'is-invalid': form.errors.has('password') }"
                          class="form-control" type="password" name="password">
                   <has-error :form="form" field="password"/>
-                  <span class="text-danger">{{ errors[0] }}</span>
+                  <span class="text-danger"><small>{{ errors[0] }}</small></span>
                 </div>
               </div>
             </ValidationProvider>
@@ -55,7 +55,7 @@
                          :class="{'is-invalid': form.errors.has('password_confirmation') }" class="form-control"
                          type="password" name="password_confirmation">
                   <has-error :form="form" field="password_confirmation"/>
-                  <span class="text-danger">{{ errors[0] }}</span>
+                  <span class="text-danger"><small>{{ errors[0] }}</small></span>
                 </div>
               </div>
             </ValidationProvider>
@@ -86,10 +86,10 @@
 
     data: () => ({
       form: new Form({
-        name: '',
-        email: '',
-        password: '',
-        password_confirmation: ''
+        name                  : '',
+        email                 : '',
+        password              : '',
+        password_confirmation : ''
       }),
       mustVerifyEmail: false
     }),
@@ -101,7 +101,7 @@
 
         // Must verify email fist.
         if (data.status) {
-          this.mustVerifyEmail = true
+          this.mustVerifyEmail  = true
         } else {
           // Log in the user.
           const {data: {token}} = await this.form.post('/api/login')

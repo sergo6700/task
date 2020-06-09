@@ -31,16 +31,16 @@
     },
 
     data: () => ({
-      layout: null,
-      defaultLayout: 'default'
+      layout        : null,
+      defaultLayout : 'default'
     }),
 
     metaInfo() {
       const {appName} = window.config
 
       return {
-        title: appName,
-        titleTemplate: `%s · ${appName}`
+        title         : appName,
+        titleTemplate : `%s · ${appName}`
       }
     },
 
@@ -55,9 +55,9 @@
        * @param {String} layout
        */
       setLayout(layout) {
-        if (!layout || !layouts[layout]) {
+        if (!layout || !layouts[layout]) 
           layout = this.defaultLayout
-        }
+        
 
         this.layout = layouts[layout]
       }

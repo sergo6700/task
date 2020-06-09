@@ -4,15 +4,15 @@ import * as types from '../mutation-types'
 
 // state
 export const state = {
-  user: null,
-  token: Cookies.get('token')
+  user  : null,
+  token : Cookies.get('token')
 }
 
 // getters
 export const getters = {
-  user: state => state.user,
-  token: state => state.token,
-  check: state => state.user !== null
+  user:   state => state.user,
+  token:  state => state.token,
+  check:  state => state.user !== null
 }
 
 // mutations
@@ -32,7 +32,7 @@ export const mutations = {
   },
 
   [types.LOGOUT](state) {
-    state.user = null
+    state.user  = null
     state.token = null
 
     Cookies.remove('token')
@@ -52,7 +52,6 @@ export const actions = {
   async fetchUser({commit}) {
     try {
       const {data} = await axios.get('/api/user')
-
       commit(types.FETCH_USER_SUCCESS, {user: data})
     } catch (e) {
       commit(types.FETCH_USER_FAILURE)

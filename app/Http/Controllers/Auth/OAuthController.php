@@ -54,7 +54,7 @@ class OAuthController extends Controller
         );
 
         return view('oauth/callback', [
-            'token' => $token,
+            'token'      => $token,
             'token_type' => 'bearer',
             'expires_in' => $this->guard()->getPayload()->get('exp') - time(),
         ]);
@@ -73,7 +73,7 @@ class OAuthController extends Controller
 
         if ($oauthProvider) {
             $oauthProvider->update([
-                'access_token' => $user->token,
+                'access_token'  => $user->token,
                 'refresh_token' => $user->refreshToken,
             ]);
 
@@ -95,16 +95,16 @@ class OAuthController extends Controller
     protected function createUser($provider, $sUser)
     {
         $user = User::create([
-            'name' => $sUser->getName(),
-            'email' => $sUser->getEmail(),
+            'name'              => $sUser->getName(),
+            'email'             => $sUser->getEmail(),
             'email_verified_at' => now(),
         ]);
 
         $user->oauthProviders()->create([
-            'provider' => $provider,
-            'provider_user_id' => $sUser->getId(),
-            'access_token' => $sUser->token,
-            'refresh_token' => $sUser->refreshToken,
+            'provider'          => $provider,
+            'provider_user_id'  => $sUser->getId(),
+            'access_token'      => $sUser->token,
+            'refresh_token'     => $sUser->refreshToken,
         ]);
 
         return $user;

@@ -49,9 +49,9 @@ class ResumeController extends Controller
      */
     public function store(ResumeCreateRequest $request)
     {
-        $store = $request->all();
-        $store['user_id'] = Auth::id();
-        $item = Resume::create($store);
+        $store               = $request->all();
+        $store['user_id']    = Auth::id();
+        $item                = Resume::create($store);
         if ($item) {
             $job = new StoreResume($item);
             $this->dispatch($job);
@@ -113,9 +113,9 @@ class ResumeController extends Controller
         $resume = Resume::findOrFail($id);
         if ($resume) {
             $resume->destroy($id);
-            return response()->json("Success", 200);
+            return 200;
         }
-        return response()->json("Not Found", 404);
+        return 400;
 
     }
 }

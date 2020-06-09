@@ -3,16 +3,16 @@ import * as types from '../mutation-types'
 
 // state
 export const state = {
-  data: null,
-  status: null,
-  resume: null,
+  data    : null,
+  status  : null,
+  resume  : null,
 }
 
 // getters
 export const getters = {
-  data: state => state.data,
-  status: state => state.status,
-  resume: state => state.resume,
+  data    : state => state.data,
+  status  : state => state.status,
+  resume  : state => state.resume,
 }
 
 
@@ -20,14 +20,14 @@ export const getters = {
 export const mutations = {
 
   [types.FETCH_RESUME](state, {resume}) {
-    state.data = resume
+    state.data    = resume
   },
   [types.FETCH_RESUME_SUCCESS](state, {status}) {
-    state.status = status
+    state.status  = status
   },
 
   [types.UPDATE_RESUME](state, {resume}) {
-    state.resume = resume
+    state.resume  = resume
   },
 
   [types.FETCH_RESUME_FAILURE](state) {

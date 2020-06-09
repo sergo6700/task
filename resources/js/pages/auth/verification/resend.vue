@@ -13,7 +13,7 @@
                   <input v-model="form.email" :class="{ 'is-invalid': form.errors.has('email') }" class="form-control"
                          type="email" name="email">
                   <has-error :form="form" field="email"/>
-                  <span class="text-danger">{{ errors[0] }}</span>
+                  <span class="text-danger"><small>{{ errors[0] }}</small></span>
                 </div>
               </div>
             </ValidationProvider>
